@@ -1,0 +1,99 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>The Totally Awesome Quiz</title>
+        <meta name="description" content="This is a game designed with pure, vanilla JavaScript.  It is a multiple choice game that keeps track of your score and adds to the leaderboards.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <img src="img/Javascript.png" alt="JavaScript Logo" class="img-responsive" id="logo">
+                    </div>
+                    <div class="col-xs-9">
+                        <h1>jQuery Trivia Game</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 main-content">
+                        <div id="i-wrapper">
+                            <h3>About This Project</h3>
+                            <p>Hi there.  I developed this game solely for the purpose of utilizing the power of jQuery in the browser.  jQuery is a very lightweight JavaScript library, with the motto of "write less, do more", and is an efficient way of writing JavaScript more quickly while also making the code a bit easier to read.  It can accomplish a lot of common tasks that may take multiple lines of code in Javascript, and wrap them into methods that can be called with just a single line.  It is also great at performing Ajax requests, like pulling in data from say, a JSON file full trivia questions and their choices and answers.</p>
+                            <h3>About The Game</h3>
+                            <p>This is a simple trivia game, where you will be presented with multiple choice questions, just like the TV game show 'Who Wants To Be A Millionaire?' Only one of the choices will be the correct answer.  There will be a total of 10 questions asked.  Each question that is answered correctly will add 100 points to your total score.  Try and get 1000 points!  At the end of the game, you can view your results as well as choose to play the game again.</p>
+                            <p>Are you ready to get those brain juices flowing?  Just click the button below to start playing.</p>
+                            <button type="button" id="get-started" class="btn-1">Get Started!</button>
+                        </div>
+                        <div id="q-wrapper">
+                            <div id="tally">Score: <span></span> pts</div>
+                            <h3 id="q-title">Question #<span class="q-number"></span></h3>
+                            <div class="question lead"></div>
+                        </div>
+                        <div id="c-wrapper">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p class="choice-a btn-2" data-value="A"></p>
+                                    <p class="choice-b btn-2" data-value="B"></p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="choice-c btn-2" data-value="C"></p>
+                                    <p class="choice-d btn-2" data-value="D"></p>
+                                </div>
+                            </div>
+                            <button type="button" id="next-btn" class="btn-1">Next Question</button>
+                            <div class="alert-box">
+                                <p>Please select an answer</p>
+                            </div>
+                        </div>
+                        <div id="r-wrapper">
+                            <p>Great!  Now it's time to see what you scored!</p>
+                            <button type="button" id="results-btn" class="btn-1">View Results</button>
+                        </div>
+                        <div id="s-wrapper">
+                            <p class="score"></p>
+                            <button type='button' id='play-again-btn' class="btn-1">Play Again?</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                <p>&copy; 2016 | Developed by <a href="http://drewcook.net/">Drew Cook</a></p>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
