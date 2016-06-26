@@ -198,13 +198,13 @@ main {
 #tally {
     float: right;
     font-size: 20px;
-    margin-bottom: 50px;
+    padding-top: 5px;
 }
 #q-title {
     font-size: 30px;
     font-weight: 300;
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 .question {
     clear: both;
@@ -261,17 +261,18 @@ main {
     }
 }
 @media screen and (min-width: 600px) {
-    .main-content {
-        padding: 100px 30px;
-    }
     header #logo {
         max-width: 120px;
         top: -3px;
     }
     #q-title {
-        clear: right;
         margin-bottom: 50px;
         font-size: 50px;
+    }
+    #tally {
+        padding-top: 12px;
+        font-size: 30px;
+        margin-bottom: 0;
     }
     .question {
         font-size: 30px;
@@ -279,7 +280,14 @@ main {
     #r-wrapper p, #s-wrapper p {
         font-size: 28px;
     }
-
+}
+@media screen and (min-width: 765px) {
+    .main-content {
+        padding: 100px 30px;
+    }
+    #q-title {
+        clear: both;
+    }
 }
 
 
