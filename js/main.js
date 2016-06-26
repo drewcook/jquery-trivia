@@ -37,6 +37,7 @@ function getRandomQuestion() {
 
 // display a random question from the dataset
 function askQuestion() {
+        $(window).scrollTop(0);
         questionsAsked++;
         getRandomQuestion();
         $("#c-wrapper p").removeClass("selected");
@@ -89,6 +90,7 @@ $('#next-btn').on('click', function() {
         showResults();
     } else if ($(this).parent().find('.selected').length !== 1) {
         $('.alert-box').show();
+        $(window).scrollTop(1000);
     } else {
         // loop over selections
         $.each($('#c-wrapper p'), function() {
@@ -98,7 +100,7 @@ $('#next-btn').on('click', function() {
                 score += 100;
             }
         });
-        // add to tally
+        // add to score tally
         $("#tally span").html(score);
         // ask new question
         askQuestion();
@@ -109,7 +111,7 @@ $('#next-btn').on('click', function() {
 // show results and play again button
 $("#results-btn").on('click', function() {
     $("#r-wrapper").hide();
-    $(".score").html("You answered " + answeredCorrectly + " questions correctly!");
+    $(".score").html("<span id='points'>" + score + "</span><span> pts</span><br>You answered " + answeredCorrectly + " question(s) correctly!");
     $("#s-wrapper").show();
     $("#play-again-btn").show();
 });
